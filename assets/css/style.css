@@ -47,18 +47,16 @@ body {
 
 /*buttons styling - color to be removed*/
 .buttons {
-    background-color: aquamarine;
     border-radius: 5px;
     margin-left: 5%;
     margin-right: 5%;
+    background-color: aquamarine;
 }
 
-.buttons > .play-button {
-    background-color: red;
-    display: inline-block;
+.play-button {
+    background-color: purple;
 }
 
-.buttons > .tutorial-button {
+.tutorial-button {
     background-color: aqua;
-    display: inline-block;
 }
