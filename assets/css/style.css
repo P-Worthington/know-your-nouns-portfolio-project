@@ -6,36 +6,58 @@ body {
     font-family: "roboto", sans-serif;
     padding: 0;
     margin: 0;
-    color: #36454f;
+    color: #f0faff;
+    background-color: rgb(20, 20, 20);
 }
 
 /*container styling*/
 .container {
-    background-color: #f0faff;
+    background-color: rgb(30, 32, 32);
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 5px;
     margin-top: 10px;
     padding-bottom: 20px;
     padding-top: 5px;
+    background-image: url(../images/french\ skyline.png);
+    background-position: left;
+    background-size: cover;
+}
+
+#logo-container {
+    text-align: center;
+    margin-bottom: -15px;
+}
+
+#logo-image {
+    height: 70px;
+    width: 70px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /*title area styling*/
 .title-area {
-    background-color: #d4d9dc;
+    background-color: rgb(59, 59, 59);
     text-align: center;
     border-radius: 5px;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 0;
     letter-spacing: 2px;
+}
+
+.title-area h1 {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 /*info styling*/
 .info {
-    background-color: #d4d9dc;
-    text-align: center;
+    background-color: rgb(59, 59, 59);
+    text-align: left;
     border-radius: 5px;
     margin-left: 5%;
     margin-right: 5%;
@@ -43,6 +65,18 @@ body {
     padding-left: 5px;
     padding-right: 5px;
 
+}
+
+.info-paragraph-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.info-paragraph-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 /*buttons styling - color to be removed*/
@@ -71,10 +105,11 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #f0faff;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
 
 .play-button:hover {
     transition-delay: 30ms;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
 }
+
