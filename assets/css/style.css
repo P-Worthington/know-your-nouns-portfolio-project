@@ -53,12 +53,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: aquamarine;
 }
 
 .play-button {
     background-color: red;
     text-align: center;
+    text-decoration: none;
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -71,5 +71,10 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #f0faff;
-    box-shadow: 10px, 10px, 10px, black;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.play-button:hover {
+    transition-delay: 30ms;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
