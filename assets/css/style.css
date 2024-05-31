@@ -6,5 +6,59 @@ body {
     font-family: "roboto", sans-serif;
     padding: 0;
     margin: 0;
+    color: #36454f;
 }
 
+/*container styling*/
+.container {
+    background-color: #f0faff;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+/*title area styling*/
+.title-area {
+    background-color: #d4d9dc;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+/*info styling*/
+.info {
+    background-color: #d4d9dc;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+/*buttons styling - color to be removed*/
+.buttons {
+    background-color: aquamarine;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.buttons > .play-button {
+    background-color: red;
+    display: inline-block;
+}
+
+.buttons > .tutorial-button {
+    background-color: aqua;
+    display: inline-block;
+}
