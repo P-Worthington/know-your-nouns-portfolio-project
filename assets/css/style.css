@@ -129,6 +129,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .catagory-box {
@@ -138,7 +139,7 @@ body {
     letter-spacing: 1px;
     border-radius: 5px;
     width: 150px;
-    margin-left: 8%;
+    margin-left: 20px;
     margin-top: 5%;
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
     padding-top: 10px;
