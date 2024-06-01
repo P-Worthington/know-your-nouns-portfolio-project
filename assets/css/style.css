@@ -114,3 +114,29 @@ body {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
 }
 
+/*catagories page styling*/
+
+.catagories {
+    /*placeholder colour*/
+    text-align: left;
+    font-size: larger;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.catagory-box {
+    background-color: rgb(59, 59, 59);
+    font-size: larger;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
