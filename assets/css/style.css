@@ -12,16 +12,16 @@ body {
 
 /*container styling*/
 .container {
-    background-color: rgb(30, 32, 32);
+    background-image: url(../images/french-skyline-darken.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 5px;
     margin-top: 10px;
     padding-bottom: 20px;
     padding-top: 5px;
-    background-image: url(../images/french\ skyline.png);
-    background-position: left;
-    background-size: cover;
 }
 
 #logo-container {
@@ -58,6 +58,7 @@ body {
 .info {
     background-color: rgb(59, 59, 59);
     text-align: left;
+    font-size: larger;
     border-radius: 5px;
     margin-left: 5%;
     margin-right: 5%;
@@ -100,7 +101,7 @@ body {
     padding-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
