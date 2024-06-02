@@ -117,16 +117,12 @@ body {
 /*catagories page styling*/
 
 .catagories, .game {
-    /*placeholder colour*/
     text-align: left;
     font-size: larger;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    max-width: 500px;
+    max-width: 400px;
     justify-content: center;
 }
 
@@ -137,13 +133,15 @@ body {
     letter-spacing: 1px;
     border-radius: 5px;
     margin-left: 20px;
+    margin-right: 10px;
     margin-top: 5%;
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: inline-block;
+    width: 150px;
+    height: 30px;
 }
-
 
 .catagory-box a {
     text-decoration: none;
