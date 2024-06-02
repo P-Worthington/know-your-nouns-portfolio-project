@@ -126,7 +126,7 @@ body {
     margin-bottom: 20px;
     padding-left: 5px;
     padding-right: 5px;
-    max-width: 400px;
+    max-width: 500px;
     justify-content: center;
 }
 
@@ -136,7 +136,6 @@ body {
     text-align: center;
     letter-spacing: 1px;
     border-radius: 5px;
-    width: 150px;
     margin-left: 20px;
     margin-top: 5%;
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
@@ -144,6 +143,7 @@ body {
     padding-bottom: 10px;
     display: inline-block;
 }
+
 
 .catagory-box a {
     text-decoration: none;
