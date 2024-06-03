@@ -1,7 +1,4 @@
-/** The Fisher-Yates shuffle
- * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
- * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
- */
+
 
 /** code to split array items // 
 * https://stackoverflow.com/questions/40784961/get-all-string-in-one-variable-after-space-in-javascript
@@ -15,6 +12,11 @@ let shoppingWords = ["Shop Magasin", "Clothes Vêtements", "Food Nourriture", "C
 let houseWords = ["Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door, Porte"]
 let restaruantWords = ["Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
 
+
+/** The Fisher-Yates shuffle
+ * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+ * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+ */
 function shuffle(array) {
         let currentIndex = array.length;
       
@@ -38,6 +40,7 @@ function schoolGame() {
         shuffle(containersEnglish);
         shuffle(containersFrench);
 
+        //to remove reandomly slected array item 
         let firstArray = schoolWords.shift();
         let secondArray = schoolWords.shift();
         let thirdArray = schoolWords.shift();
@@ -45,20 +48,26 @@ function schoolGame() {
         let fifthArray = schoolWords.shift();
         let sixthArray = schoolWords.shift();
         
+        /** code to split array items // 
+        * https://stackoverflow.com/questions/40784961/get-all-string-in-one-variable-after-space-in-javascript
+        */        
         var values = firstArray.split(" ");
         var englishWordOne = values[0];
         var frenchWordOne = firstArray.substring(firstArray.indexOf(' ') + 1);
         console.log(englishWordOne);
         console.log(frenchWordOne);
         
+        //to select random container 
         let englishContainerOne = containersEnglish.shift();
         console.log(englishContainerOne);
         let frenchContainerOne = containersFrench.shift();
         console.log(frenchContainerOne);
 
+        //to send random word to random container
         document.getElementById(englishContainerOne).textContent = englishWordOne;
         document.getElementById(frenchContainerOne).textContent = frenchWordOne;
         
+        //repeat of the above code 
         var values = secondArray.split(" ");
         var englishWordTwo = values[0];
         var frenchWordTwo = secondArray.substring(secondArray.indexOf(' ') + 1);
@@ -128,7 +137,25 @@ function schoolGame() {
 
         document.getElementById(englishContainerSix).textContent = englishWordSix;
         document.getElementById(frenchContainerSix).textContent = frenchWordSix;
+        // end of repeat 
+
+        
+        //telling the programme that these words are equal 
+        englishWordOne = frenchWordOne;
+        englishWordTwo = frenchWordTwo;
+        englishWordThree = frenchWordThree;
+        englishWordFour = frenchWordFour;
+        englishWordFive = frenchWordFive;
+        englishWordSix = frenchWordSix; 
+
 
 }
+
+function activateAndAssess () {
+        var selected = document.getElementById("school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6");
+        element.classList.add("selected");
+}
+
+
 
 schoolGame()

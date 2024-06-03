@@ -155,3 +155,20 @@ body {
     margin-top: 15px;
     padding-bottom: -20px;
 }
+
+.selected {
+    background-color: rgb(39, 39, 39);
+    font-size: large;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 5%;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.9);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+}
