@@ -164,3 +164,7 @@ body {
 .selected-french {
     background-color: rgb(39, 39, 39);
 }
+
+#selected {
+    background-color: red;
+}
