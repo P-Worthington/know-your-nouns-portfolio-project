@@ -117,18 +117,17 @@ body {
 /*catagories page styling*/
 
 .catagories, .game {
-    text-align: left;
     font-size: larger;
-    border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    min-width: 400px;
     max-width: 400px;
     justify-content: center;
 }
 
 .catagory-box, .game-box {
     background-color: rgb(59, 59, 59);
-    font-size: larger;
+    font-size: large;
     text-align: center;
     letter-spacing: 1px;
     border-radius: 5px;
