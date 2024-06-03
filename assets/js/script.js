@@ -139,9 +139,8 @@ function activateAndAssess1 () {
         let idAdd = document.getElementById("school-english-word-1");
         idAdd.id = ("firstSelection");
         let wordOne = idAdd.innerHTML;
-
-        console.log(wordOne);
         
+        return wordOne;       
 }
 
 function activateAndAssess2 () {
@@ -156,7 +155,7 @@ function activateAndAssess2 () {
         idAdd.id = ("secondSelection");
         let wordTwo = idAdd.innerHTML;
 
-        console.log(wordTwo);
+        return wordTwo;
 }
         
 function activateAndAssess3 () {
@@ -171,7 +170,7 @@ function activateAndAssess3 () {
         idAdd.id = ("firstSelection");
         let wordOne = idAdd.innerHTML;
 
-        console.log(wordOne);
+        return wordOne;
 
 }
 function activateAndAssess4 () {
@@ -186,7 +185,7 @@ function activateAndAssess4 () {
         idAdd.id = ("secondSelection");
         let wordTwo = idAdd.innerHTML;
 
-        console.log(wordTwo);
+        return wordTwo;
 }
 function activateAndAssess5 () {
         document.getElementById("school-english-word-3").classList.toggle("selected");
@@ -200,7 +199,7 @@ function activateAndAssess5 () {
         idAdd.id = ("firstSelection");
         let wordOne = idAdd.innerHTML;
 
-        console.log(wordOne);
+        return wordOne;
 }
 function activateAndAssess6 () {
         document.getElementById("school-french-word-3",).classList.toggle("selected-french");
@@ -214,7 +213,7 @@ function activateAndAssess6 () {
         idAdd.id = ("secondSelection");
         let wordTwo = idAdd.innerHTML;
 
-        console.log(wordTwo);
+        return wordTwo;
 }
 function activateAndAssess7 () {
         document.getElementById("school-english-word-4").classList.toggle("selected");
@@ -228,7 +227,7 @@ function activateAndAssess7 () {
         idAdd.id = ("firstSelection");
         let wordOne = idAdd.innerHTML;
 
-        console.log(wordOne);
+        return wordOne;
 }
 function activateAndAssess8 () {
         document.getElementById("school-french-word-4",).classList.toggle("selected-french");
@@ -242,7 +241,7 @@ function activateAndAssess8 () {
         idAdd.id = ("secondSelection");
         let wordTwo = idAdd.innerHTML;
 
-        console.log(wordTwo);
+        return wordTwo;
 }
 
 function activateAndAssess9 () {
@@ -257,7 +256,7 @@ function activateAndAssess9 () {
         idAdd.id = ("firstSelection");
         let wordOne = idAdd.innerHTML;
 
-        console.log(wordOne);
+        return wordOne;
 }
 
 function activateAndAssess10 () {
@@ -269,9 +268,10 @@ function activateAndAssess10 () {
         document.getElementById("school-french-word-6").classList.remove("selected-french");
 
         let idAdd = document.getElementById("school-french-word-5");
+        idAdd.id = ("secondSelection");
         let wordTwo = idAdd.innerHTML;
 
-        console.log(wordTwo);
+        return wordTwo;
 }
 
 function activateAndAssess11 () {
@@ -286,7 +286,7 @@ function activateAndAssess11 () {
         idAdd.id = ("firstSelection");
         let wordOne = idAdd.innerHTML;
 
-        console.log(wordOne);
+        return wordOne;
 }
 function activateAndAssess12 () {
         document.getElementById("school-french-word-6",).classList.toggle("selected-french");
@@ -297,11 +297,12 @@ function activateAndAssess12 () {
         document.getElementById("school-french-word-5").classList.remove("selected-french");
 
         let idAdd = document.getElementById("school-french-word-6");
+        idAdd.id = ("secondSelection");
         let wordTwo = idAdd.innerHTML;
 
-        console.log(wordTwo);
+        return wordTwo;
 }
 
 
-
-
+console.log(wordOne);
+console.log(wordTwo);
