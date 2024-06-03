@@ -117,13 +117,6 @@ function schoolGame() {
 
         
         //telling the programme that these words are equal 
-        englishWordOne = frenchWordOne;
-        englishWordTwo = frenchWordTwo;
-        englishWordThree = frenchWordThree;
-        englishWordFour = frenchWordFour;
-        englishWordFive = frenchWordFive;
-        englishWordSix = frenchWordSix; 
-
         englishContainerOne = frenchContainerOne;
         englishContainerTwo = frenchContainerTwo;
         englishContainerThree = frenchContainerThree;
@@ -131,7 +124,9 @@ function schoolGame() {
         englishContainerFive = frenchContainerFive;
         englishContainerSix = frenchContainerSix;
 
+
 }
+
 
 //adding highlighted accent to selected word
 function activateAndAssess1 () {
