@@ -54,14 +54,10 @@ function schoolGame() {
         var values = firstArray.split(" ");
         var englishWordOne = values[0];
         var frenchWordOne = firstArray.substring(firstArray.indexOf(' ') + 1);
-        console.log(englishWordOne);
-        console.log(frenchWordOne);
         
         //to select random container 
         let englishContainerOne = containersEnglish.shift();
-        console.log(englishContainerOne);
         let frenchContainerOne = containersFrench.shift();
-        console.log(frenchContainerOne);
 
         //to send random word to random container
         document.getElementById(englishContainerOne).textContent = englishWordOne;
@@ -71,13 +67,9 @@ function schoolGame() {
         var values = secondArray.split(" ");
         var englishWordTwo = values[0];
         var frenchWordTwo = secondArray.substring(secondArray.indexOf(' ') + 1);
-        console.log(englishWordTwo);
-        console.log(frenchWordTwo);
         
         let englishContainerTwo = containersEnglish.shift();
-        console.log(englishContainerTwo);
         let frenchContainerTwo = containersFrench.shift();
-        console.log(frenchContainerTwo);
 
         document.getElementById(englishContainerTwo).textContent = englishWordTwo;
         document.getElementById(frenchContainerTwo).textContent = frenchWordTwo;
@@ -85,13 +77,9 @@ function schoolGame() {
         var values = thirdArray.split(" ");
         var englishWordThree = values[0];
         var frenchWordThree = thirdArray.substring(thirdArray.indexOf(' ') + 1);
-        console.log(englishWordThree);
-        console.log(frenchWordThree);
         
         let englishContainerThree = containersEnglish.shift();
-        console.log(englishContainerThree);
         let frenchContainerThree = containersFrench.shift();
-        console.log(frenchContainerThree);
 
         document.getElementById(englishContainerThree).textContent = englishWordThree;
         document.getElementById(frenchContainerThree).textContent = frenchWordThree;
@@ -99,13 +87,9 @@ function schoolGame() {
         var values = forthArray.split(" ");
         var englishWordFour = values[0];
         var frenchWordFour = forthArray.substring(forthArray.indexOf(' ') + 1);
-        console.log(englishWordFour);
-        console.log(frenchWordFour);
         
         let englishContainerFour = containersEnglish.shift();
-        console.log(englishContainerFour);
         let frenchContainerFour = containersFrench.shift();
-        console.log(frenchContainerFour);
 
         document.getElementById(englishContainerFour).textContent = englishWordFour;
         document.getElementById(frenchContainerFour).textContent = frenchWordFour;
@@ -113,13 +97,9 @@ function schoolGame() {
         var values = fifthArray.split(" ");
         var englishWordFive = values[0];
         var frenchWordFive = fifthArray.substring(fifthArray.indexOf(' ') + 1);
-        console.log(englishWordFive);
-        console.log(frenchWordFive);
         
         let englishContainerFive = containersEnglish.shift();
-        console.log(englishContainerFive);
         let frenchContainerFive = containersFrench.shift();
-        console.log(frenchContainerFive);
 
         document.getElementById(englishContainerFive).textContent = englishWordFive;
         document.getElementById(frenchContainerFive).textContent = frenchWordFive;
@@ -127,13 +107,9 @@ function schoolGame() {
         var values = sixthArray.split(" ");
         var englishWordSix = values[0];
         var frenchWordSix = sixthArray.substring(sixthArray.indexOf(' ') + 1);
-        console.log(englishWordSix);
-        console.log(frenchWordSix);
         
         let englishContainerSix = containersEnglish.shift();
-        console.log(englishContainerSix);
         let frenchContainerSix = containersFrench.shift();
-        console.log(frenchContainerSix);
 
         document.getElementById(englishContainerSix).textContent = englishWordSix;
         document.getElementById(frenchContainerSix).textContent = frenchWordSix;
@@ -148,14 +124,119 @@ function schoolGame() {
         englishWordFive = frenchWordFive;
         englishWordSix = frenchWordSix; 
 
+        englishContainerOne = frenchContainerOne;
+        englishContainerTwo = frenchContainerTwo;
+        englishContainerThree = frenchContainerThree;
+        englishContainerFour = frenchContainerFour;
+        englishContainerFive = frenchContainerFive;
+        englishContainerSix = frenchContainerSix;
 
 }
 
-function activateAndAssess () {
-        var selected = document.getElementById("school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6");
-        element.classList.add("selected");
+//adding highlighted accent to selected word
+function activateAndAssess1 () {
+        document.getElementById("school-english-word-1").classList.toggle("selected");
+        document.getElementById("school-english-word-2").classList.remove("selected");
+        document.getElementById("school-english-word-3").classList.remove("selected");
+        document.getElementById("school-english-word-4").classList.remove("selected");
+        document.getElementById("school-english-word-5").classList.remove("selected");
+        document.getElementById("school-english-word-6").classList.remove("selected");
+}
+function activateAndAssess2 () {
+        document.getElementById("school-french-word-1",).classList.toggle("selected-french");
+        document.getElementById("school-french-word-2").classList.remove("selected-french");
+        document.getElementById("school-french-word-3").classList.remove("selected-french");
+        document.getElementById("school-french-word-4").classList.remove("selected-french");
+        document.getElementById("school-french-word-5").classList.remove("selected-french");
+        document.getElementById("school-french-word-6").classList.remove("selected-french");
+}
+        
+function activateAndAssess3 () {
+        document.getElementById("school-english-word-2").classList.toggle("selected");
+        document.getElementById("school-english-word-1").classList.remove("selected");
+        document.getElementById("school-english-word-3").classList.remove("selected");
+        document.getElementById("school-english-word-4").classList.remove("selected");
+        document.getElementById("school-english-word-5").classList.remove("selected");
+        document.getElementById("school-english-word-6").classList.remove("selected");
+
+}
+function activateAndAssess4 () {
+        document.getElementById("school-french-word-2",).classList.toggle("selected-french");
+        document.getElementById("school-french-word-1").classList.remove("selected-french");
+        document.getElementById("school-french-word-3").classList.remove("selected-french");
+        document.getElementById("school-french-word-4").classList.remove("selected-french");
+        document.getElementById("school-french-word-5").classList.remove("selected-french");
+        document.getElementById("school-french-word-6").classList.remove("selected-french");
+}
+function activateAndAssess5 () {
+        document.getElementById("school-english-word-3").classList.toggle("selected");
+        document.getElementById("school-english-word-1").classList.remove("selected");
+        document.getElementById("school-english-word-2").classList.remove("selected");
+        document.getElementById("school-english-word-4").classList.remove("selected");
+        document.getElementById("school-english-word-5").classList.remove("selected");
+        document.getElementById("school-english-word-6").classList.remove("selected");
+}
+function activateAndAssess6 () {
+        document.getElementById("school-french-word-3",).classList.toggle("selected-french");
+        document.getElementById("school-french-word-1").classList.remove("selected-french");
+        document.getElementById("school-french-word-2").classList.remove("selected-french");
+        document.getElementById("school-french-word-4").classList.remove("selected-french");
+        document.getElementById("school-french-word-5").classList.remove("selected-french");
+        document.getElementById("school-french-word-6").classList.remove("selected-french");
+}
+function activateAndAssess7 () {
+        document.getElementById("school-english-word-4").classList.toggle("selected");
+        document.getElementById("school-english-word-1").classList.remove("selected");
+        document.getElementById("school-english-word-2").classList.remove("selected");
+        document.getElementById("school-english-word-3").classList.remove("selected");
+        document.getElementById("school-english-word-5").classList.remove("selected");
+        document.getElementById("school-english-word-6").classList.remove("selected");
+}
+function activateAndAssess8 () {
+        document.getElementById("school-french-word-4",).classList.toggle("selected-french");
+        document.getElementById("school-french-word-1").classList.remove("selected-french");
+        document.getElementById("school-french-word-2").classList.remove("selected-french");
+        document.getElementById("school-french-word-3").classList.remove("selected-french");
+        document.getElementById("school-french-word-5").classList.remove("selected-french");
+        document.getElementById("school-french-word-6").classList.remove("selected-french");
+}
+function activateAndAssess9 () {
+        document.getElementById("school-english-word-5").classList.toggle("selected");
+        document.getElementById("school-english-word-1").classList.remove("selected");
+        document.getElementById("school-english-word-2").classList.remove("selected");
+        document.getElementById("school-english-word-3").classList.remove("selected");
+        document.getElementById("school-english-word-4").classList.remove("selected");
+        document.getElementById("school-english-word-6").classList.remove("selected");
+}
+function activateAndAssess10 () {
+        document.getElementById("school-french-word-5",).classList.toggle("selected-french");
+        document.getElementById("school-french-word-1").classList.remove("selected-french");
+        document.getElementById("school-french-word-2").classList.remove("selected-french");
+        document.getElementById("school-french-word-3").classList.remove("selected-french");
+        document.getElementById("school-french-word-4").classList.remove("selected-french");
+        document.getElementById("school-french-word-6").classList.remove("selected-french");
+}
+function activateAndAssess11 () {
+        document.getElementById("school-english-word-6").classList.toggle("selected");
+        document.getElementById("school-english-word-1").classList.remove("selected");
+        document.getElementById("school-english-word-2").classList.remove("selected");
+        document.getElementById("school-english-word-3").classList.remove("selected");
+        document.getElementById("school-english-word-4").classList.remove("selected");
+        document.getElementById("school-english-word-5").classList.remove("selected");
+}
+function activateAndAssess12 () {
+        document.getElementById("school-french-word-6",).classList.toggle("selected-french");
+        document.getElementById("school-french-word-1").classList.remove("selected-french");
+        document.getElementById("school-french-word-2").classList.remove("selected-french");
+        document.getElementById("school-french-word-3").classList.remove("selected-french");
+        document.getElementById("school-french-word-4").classList.remove("selected-french");
+        document.getElementById("school-french-word-5").classList.remove("selected-french");
 }
 
 
 
-schoolGame()
+
+
+
+schoolGame();
+
