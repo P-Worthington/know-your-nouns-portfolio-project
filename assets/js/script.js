@@ -289,12 +289,10 @@ function EnglishFrenchTest () {
                 let rawPlus = "`" + raw + "`";
                 let numberOne = numberFinder(rawPlus);
                 numberOne.toString;
-                console.log(numberOne);
-
                 let stringToInsert = "school-english-word-"+numberOne;
                 let resultOne = stringToInsert.replace(/\s/g, "");
-                console.log(resultOne);
-
+                let idAddEnglish = document.getElementById("firstSelection");
+                idAddEnglish.id = (resultOne);
 
 
                 let second = document.getElementById("secondSelection");
@@ -303,13 +301,24 @@ function EnglishFrenchTest () {
                 let rawFrenchPlus = "`" + rawFrench + "`";
                 let numberTwo = numberFinder(rawFrenchPlus);
                 numberTwo.toString;
-                console.log(numberTwo);
-
                 let stringToInsertFrench = "school-french-word-"+numberTwo;
                 let resultTwo = stringToInsertFrench.replace(/\s/g, "");
+                let idAddFrench = document.getElementById("secondSelection");
+                idAddFrench.id = (resultTwo);
                 console.log(resultTwo);
-                
 
+                //console.log(document.getElementById("school-english-word-1"));
+                //console.log(document.getElementById("school-english-word-2"));
+                //console.log(document.getElementById("school-english-word-3"));
+                //console.log(document.getElementById("school-english-word-4"));
+                //console.log(document.getElementById("school-english-word-5"));
+                //console.log(document.getElementById("school-english-word-6"));
+                console.log(document.getElementById("school-french-word-1"));
+                //console.log(document.getElementById("school-french-word-2"));
+                //console.log(document.getElementById("school-french-word-3"));
+                //console.log(document.getElementById("school-french-word-4"));
+                //console.log(document.getElementById("school-french-word-5"));
+                //console.log(document.getElementById("school-french-word-6"));
 
 
         } else {
@@ -322,6 +331,7 @@ function EnglishFrenchTest () {
         }
 
 }
+
 
 //document.getElementById("school-english-word-1").addEventListener("click", FrenchEnglishTest);
 //document.getElementById("school-english-word-2").addEventListener("click", FrenchEnglishTest);
@@ -370,3 +380,28 @@ function numberFinder(a) {
         return numbers;
     }
     
+function addingNumbersToString (a, b) {
+        let subject = a;
+        let raw = subject.outerHTML;
+        raw.toString;
+        let rawString = "`" + rawFrench + "`";
+        let number = numberFinder(rawString);
+        number.toString;
+        let stringToInsert = b+number;
+        let result = stringToInsert.replace(/\s/g, "");
+        return result;
+}
+
+
+test = document.getElementsByName("school-english-Word-1");
+let result = test.outerHTML;
+console.log(result);
+
+
+function resetId (a) {
+        let test = a;
+        test.id = test; 
+}
+
+
+
