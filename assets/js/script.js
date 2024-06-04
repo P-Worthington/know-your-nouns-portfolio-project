@@ -276,7 +276,6 @@ function EnglishFrenchTest () {
         let result = schoolWordsBase.includes(stringTest);
 
         if (result === true) {
-                console.log("correct");
 
                 document.getElementById("firstSelection").classList.remove("selected");
                 document.getElementById("secondSelection").classList.remove("selected-french");
@@ -288,18 +287,27 @@ function EnglishFrenchTest () {
                 let raw = first.outerHTML;
                 raw.toString;
                 let rawPlus = "`" + raw + "`";
-                numberOne = extractNumbers(rawPlus);
-                console.log(numberOne);
+                let test = extractNumbers(rawPlus);
+                test.toString;
+                console.log(test);
+                let split = test.split("");
+                console.log(split);
+
+                let stringToInsert = "school-english-word-"+numberOne;
+                console.log(stringToInsert);
+
 
 
                 let second = document.getElementById("secondSelection");
                 let rawFrench = second.outerHTML;
                 rawFrench.toString;
                 let rawFrenchPlus = "`" + rawFrench + "`";
-                numberTwo = extractNumbers(rawFrenchPlus);
+                let numberTwo = extractNumbers(rawFrenchPlus);
+                numberOne.toString;
                 console.log(numberTwo);
 
-
+                let stringToInsertFrench = "school-french-word-"+numberTwo;
+                console.log(stringToInsertFrench);
                 
 
 
@@ -359,7 +367,7 @@ function extractNumbers(a) {
                 numbers += a[i];
             }
         }
-        console.log(numbers)
+        return (numbers);
 }
 
 
