@@ -32,7 +32,7 @@ function shuffle(array) {
 
 
 
-
+const schoolWordsBase = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur"]
 let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur"]
 shuffle(schoolWords);
 let containersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
@@ -117,12 +117,14 @@ document.getElementById(frenchContainerSix).textContent = frenchWordSix;
 
         
 //telling the programme that these words are equal 
-englishContainerOne = frenchContainerOne;
-englishContainerTwo = frenchContainerTwo;
-englishContainerThree = frenchContainerThree;
-englishContainerFour = frenchContainerFour;
-englishContainerFive = frenchContainerFive;
-englishContainerSix = frenchContainerSix;
+englishWordOne = frenchWordOne;
+englishWordTwo = frenchWordTwo;
+englishWordThree = frenchWordThree;
+englishWordFour = frenchWordFour;
+englishWordFive = frenchWordFive;
+englishWordSix = frenchWordSix;
+
+
 
 
 //the id of school-english-word-1 is randomised using shuffle. lets find the result and assess that// 
@@ -307,11 +309,54 @@ function activateAndAssess12 () {
         return wordTwo;
 }
 
-document.getElementById("school-french-word-1").addEventListener("click", test)
+document.getElementById("school-french-word-1").addEventListener("click", EnglishFrenchTest);
+document.getElementById("school-french-word-2").addEventListener("click", EnglishFrenchTest);
+document.getElementById("school-french-word-3").addEventListener("click", EnglishFrenchTest);
+document.getElementById("school-french-word-4").addEventListener("click", EnglishFrenchTest);
+document.getElementById("school-french-word-5").addEventListener("click", EnglishFrenchTest);
+document.getElementById("school-french-word-6").addEventListener("click", EnglishFrenchTest);
 
-function test () {
+
+function EnglishFrenchTest () {
         let first = document.getElementById("firstSelection");
         let firstParameter = first.innerHTML;
 
-        console.log(firstParameter);
+        let second = document.getElementById("secondSelection");
+        let secondParameter = second.innerHTML;
+
+        let stringTest = firstParameter+(" ")+secondParameter;
+        
+        let result = schoolWordsBase.includes(stringTest);
+
+        if (result === true) {
+                console.log("correct");
+        } else {
+                console.log("incorrect");
+        }
+
+}
+
+document.getElementById("school-english-word-1").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-2").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-3").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-4").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-5").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-6").addEventListener("click", FrenchEnglishTest);
+
+function FrenchEnglishTest () {
+        let first = document.getElementById("secondSelection");
+        let firstParameter = first.innerHTML;
+
+        let second = document.getElementById("firstSelection");
+        let secondParameter = second.innerHTML;
+
+        let stringTest = secondParameter+(" ")+firstParameter;
+
+        let result = schoolWordsBase.includes(stringTest);
+
+        if (result === true) {
+                console.log("correct");
+        } else {
+                console.log("incorrect");
+        }
 }
