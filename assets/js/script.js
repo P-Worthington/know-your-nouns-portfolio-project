@@ -299,9 +299,11 @@ function EnglishFrenchTest () {
                 let rawFrench = second.outerHTML;
                 rawFrench.toString;
                 let rawFrenchPlus = "`" + rawFrench + "`";
+                console.log(rawFrenchPlus);
                 let numberTwo = numberFinder(rawFrenchPlus);
                 numberTwo.toString;
                 let stringToInsertFrench = "school-french-word-"+numberTwo;
+                console.log(stringToInsertFrench);
                 let resultTwo = stringToInsertFrench.replace(/\s/g, "");
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
