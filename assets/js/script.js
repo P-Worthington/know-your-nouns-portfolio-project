@@ -288,12 +288,17 @@ function EnglishFrenchTest () {
                 let raw = first.outerHTML;
                 raw.toString;
                 let rawPlus = "`" + raw + "`";
-                console.log(rawPlus);
-
+                numberOne = extractNumbers(rawPlus);
+                console.log(numberOne);
 
 
                 let second = document.getElementById("secondSelection");
-                second.outerHTML;
+                let rawFrench = second.outerHTML;
+                rawFrench.toString;
+                let rawFrenchPlus = "`" + rawFrench + "`";
+                numberTwo = extractNumbers(rawFrenchPlus);
+                console.log(numberTwo);
+
 
                 
 
@@ -345,13 +350,13 @@ function one(){//FrenchEnglishTest () {
         }
 }
 
-
+//https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/
 
 function extractNumbers(a) {
         let numbers = "";
         for (let i = 0; i < a.length; i++) {
-            if (!isNaN(str[i])) {
-                numbers += str[i];
+            if (!isNaN(a[i])) {
+                numbers += a[i];
             }
         }
         console.log(numbers)
