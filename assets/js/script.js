@@ -303,6 +303,7 @@ function activateAndAssess12 () {
         return wordTwo;
 }
 
+function isCorrect () {
 
-console.log(wordOne);
-console.log(wordTwo);
+}
+
