@@ -285,10 +285,17 @@ function EnglishFrenchTest () {
                 document.getElementById("secondSelection").classList.add("correct");
                 
                 let first = document.getElementById("firstSelection");
-                console.log(first);
-                       
+                let raw = first.outerHTML;
+                raw.toString;
+                let rawPlus = "`" + raw + "`";
+                console.log(rawPlus);
+
+
+
                 let second = document.getElementById("secondSelection");
-                second.toString;
+                second.outerHTML;
+
+                
 
 
 
