@@ -302,11 +302,11 @@ function EnglishFrenchTest () {
                 let rawFrenchPlus = "`" + rawFrench + "`";
 
                 let numberTwo = numberFinder(rawFrenchPlus);
-                console.log(numberTwo)
+
                 let numberTwoResult = numberTwo / 2;
                 numberTwo.toString;
                 let stringToInsertFrench = "school-french-word-"+numberTwoResult;
-                console.log(numberTwoResult);
+
                 let resultTwo = stringToInsertFrench.replace(/\s/g, "");
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
@@ -346,11 +346,11 @@ function EnglishFrenchTest () {
                 let rawFrenchPlus = "`" + rawFrench + "`";
 
                 let numberTwo = numberFinder(rawFrenchPlus);
-                console.log(numberTwo)
+
                 let numberTwoResult = numberTwo / 2;
                 numberTwo.toString;
                 let stringToInsertFrench = "school-french-word-"+numberTwoResult;
-                console.log(numberTwoResult);
+
                 let resultTwo = stringToInsertFrench.replace(/\s/g, "");
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
@@ -360,39 +360,109 @@ function EnglishFrenchTest () {
 }
 
 
-//document.getElementById("school-english-word-1").addEventListener("click", FrenchEnglishTest);
-//document.getElementById("school-english-word-2").addEventListener("click", FrenchEnglishTest);
-//document.getElementById("school-english-word-3").addEventListener("click", FrenchEnglishTest);
-//document.getElementById("school-english-word-4").addEventListener("click", FrenchEnglishTest);
-//document.getElementById("school-english-word-5").addEventListener("click", FrenchEnglishTest);
-//document.getElementById("school-english-word-6").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-1").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-2").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-3").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-4").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-5").addEventListener("click", FrenchEnglishTest);
+document.getElementById("school-english-word-6").addEventListener("click", FrenchEnglishTest);
 
-function one(){//FrenchEnglishTest () {
-        let first = document.getElementById("secondSelection");
+function FrenchEnglishTest () {
+        let first = document.getElementById("firstSelection");
         let firstParameter = first.innerHTML;
 
-        let second = document.getElementById("firstSelection");
+        let second = document.getElementById("secondSelection");
         let secondParameter = second.innerHTML;
 
-        let stringTest = secondParameter+(" ")+firstParameter;
-
+        let stringTest = firstParameter+(" ")+secondParameter;
+        
         let result = schoolWordsBase.includes(stringTest);
 
         if (result === true) {
-                console.log("correct");
 
-                document.getElementById("firstSelection").classList.remove("selected-french");
-                document.getElementById("secondSelection").classList.remove("selected");
+                document.getElementById("firstSelection").classList.remove("selected");
+                document.getElementById("secondSelection").classList.remove("selected-french");
 
                 document.getElementById("firstSelection").classList.add("correct");
                 document.getElementById("secondSelection").classList.add("correct");
+                
+                let first = document.getElementById("firstSelection");
+                let raw = first.outerHTML;
+                raw.toString;
+                let rawPlus = "`" + raw + "`";
+                let numberOne = numberFinder(rawPlus);
 
-                document.getElementById("firstSelection").removeAttribute("id");
-                document.getElementById("secondSelection").removeAttribute("id");
+                let halfNumberOne = numberOne / 2;
+                let numberOneResult = halfNumberOne + 0.5;
+                numberOne.toString;
+   
+                let stringToInsert = "school-english-word-"+numberOneResult;
+                let resultOne = stringToInsert.replace(/\s/g, "");
+                let idAddEnglish = document.getElementById("firstSelection");
+                idAddEnglish.id = (resultOne);
+
+
+                let second = document.getElementById("secondSelection");
+                let rawFrench = second.outerHTML;
+                rawFrench.toString;
+                let rawFrenchPlus = "`" + rawFrench + "`";
+
+                let numberTwo = numberFinder(rawFrenchPlus);
+
+                let numberTwoResult = numberTwo / 2;
+                numberTwo.toString;
+                let stringToInsertFrench = "school-french-word-"+numberTwoResult;
+
+                let resultTwo = stringToInsertFrench.replace(/\s/g, "");
+                let idAddFrench = document.getElementById("secondSelection");
+                idAddFrench.id = (resultTwo);
+
+
+
+
 
         } else {
-                console.log("incorrect");
+
+                document.getElementById("firstSelection").classList.remove("selected");
+                document.getElementById("secondSelection").classList.remove("selected-french");
+
+                document.getElementById("firstSelection").classList.add("incorrect");
+                document.getElementById("secondSelection").classList.add("incorrect");
+
+
+                let first = document.getElementById("firstSelection");
+                let raw = first.outerHTML;
+                raw.toString;
+                let rawPlus = "`" + raw + "`";
+                let numberOne = numberFinder(rawPlus);
+
+                let halfNumberOne = numberOne / 2;
+                let numberOneResult = halfNumberOne + 0.5;
+                numberOne.toString;
+   
+                let stringToInsert = "school-english-word-"+numberOneResult;
+                let resultOne = stringToInsert.replace(/\s/g, "");
+                let idAddEnglish = document.getElementById("firstSelection");
+                idAddEnglish.id = (resultOne);
+
+
+                let second = document.getElementById("secondSelection");
+                let rawFrench = second.outerHTML;
+                rawFrench.toString;
+                let rawFrenchPlus = "`" + rawFrench + "`";
+
+                let numberTwo = numberFinder(rawFrenchPlus);
+
+                let numberTwoResult = numberTwo / 2;
+                numberTwo.toString;
+                let stringToInsertFrench = "school-french-word-"+numberTwoResult;
+
+                let resultTwo = stringToInsertFrench.replace(/\s/g, "");
+                let idAddFrench = document.getElementById("secondSelection");
+                idAddFrench.id = (resultTwo);
+
         }
+
 }
 
 //https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/
