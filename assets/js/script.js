@@ -132,9 +132,6 @@ englishWordSix = frenchWordSix;
 //adding highlighted accent to selected word
 function activateAndAssess1 () {
         document.getElementById("school-english-word-1").classList.toggle("selected");
-        
-        document.getElementById("school-english-word-2").removeAttribute("firstSelection");
-        //continue if works// 
 
         let idAdd = document.getElementById("school-english-word-1");
         idAdd.id = ("firstSelection");
@@ -288,8 +285,12 @@ function EnglishFrenchTest () {
                 raw.toString;
                 let rawPlus = "`" + raw + "`";
                 let numberOne = numberFinder(rawPlus);
+
+                let halfNumberOne = numberOne / 2;
+                let numberOneResult = halfNumberOne + 0.5;
                 numberOne.toString;
-                let stringToInsert = "school-english-word-"+numberOne;
+   
+                let stringToInsert = "school-english-word-"+numberOneResult;
                 let resultOne = stringToInsert.replace(/\s/g, "");
                 let idAddEnglish = document.getElementById("firstSelection");
                 idAddEnglish.id = (resultOne);
@@ -299,15 +300,17 @@ function EnglishFrenchTest () {
                 let rawFrench = second.outerHTML;
                 rawFrench.toString;
                 let rawFrenchPlus = "`" + rawFrench + "`";
-                console.log(rawFrenchPlus);
+
                 let numberTwo = numberFinder(rawFrenchPlus);
+                console.log(numberTwo)
+                let numberTwoResult = numberTwo / 2;
                 numberTwo.toString;
-                let stringToInsertFrench = "school-french-word-"+numberTwo;
-                console.log(stringToInsertFrench);
+                let stringToInsertFrench = "school-french-word-"+numberTwoResult;
+                console.log(numberTwoResult);
                 let resultTwo = stringToInsertFrench.replace(/\s/g, "");
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
-                console.log(resultTwo);
+
 
                 //console.log(document.getElementById("school-english-word-1"));
                 //console.log(document.getElementById("school-english-word-2"));
@@ -315,7 +318,7 @@ function EnglishFrenchTest () {
                 //console.log(document.getElementById("school-english-word-4"));
                 //console.log(document.getElementById("school-english-word-5"));
                 //console.log(document.getElementById("school-english-word-6"));
-                console.log(document.getElementById("school-french-word-1"));
+                //console.log(document.getElementById("school-french-word-1"));
                 //console.log(document.getElementById("school-french-word-2"));
                 //console.log(document.getElementById("school-french-word-3"));
                 //console.log(document.getElementById("school-french-word-4"));
