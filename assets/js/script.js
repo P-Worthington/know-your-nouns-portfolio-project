@@ -30,9 +30,17 @@ function shuffle(array) {
         }
 }
 
-
-
 const schoolWordsBase = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur"]
+
+
+//working on creating this function 
+function game (a, b, c) {
+        let schoolWords = a;
+        let containersEnglish = b;
+        let containersFrench = c;
+}
+
+
 let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur"]
 shuffle(schoolWords);
 let containersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
@@ -253,6 +261,8 @@ function activateAndAssess12 () {
         return wordTwo;
 }
 
+
+
 document.getElementById("school-french-word-1").addEventListener("click", EnglishFrenchTest);
 document.getElementById("school-french-word-2").addEventListener("click", EnglishFrenchTest);
 document.getElementById("school-french-word-3").addEventListener("click", EnglishFrenchTest);
@@ -260,20 +270,24 @@ document.getElementById("school-french-word-4").addEventListener("click", Englis
 document.getElementById("school-french-word-5").addEventListener("click", EnglishFrenchTest);
 document.getElementById("school-french-word-6").addEventListener("click", EnglishFrenchTest);
 
-
+/** function to assess if two selected items are correct or incorrect
+ */
 function EnglishFrenchTest () {
+        //first selected word
         let first = document.getElementById("firstSelection");
         let firstParameter = first.innerHTML;
-
+        //second selected word
         let second = document.getElementById("secondSelection");
         let secondParameter = second.innerHTML;
-
+        //to concate the two words together as they were in teh origional string
         let stringTest = firstParameter+(" ")+secondParameter;
         
         let result = schoolWordsBase.includes(stringTest);
-
+        // to test if user input is correct
         if (result === true) {
-
+                /**code used to return the html document to origional state by esablishing which two containers were
+                 * selected and returning them to origional
+                */
                 document.getElementById("firstSelection").classList.remove("selected");
                 document.getElementById("secondSelection").classList.remove("selected-french");
 
@@ -289,7 +303,7 @@ function EnglishFrenchTest () {
                 let halfNumberOne = numberOne / 2;
                 let numberOneResult = halfNumberOne + 0.5;
                 numberOne.toString;
-   
+                //numberOneResult is the number of the container that the user slected and adding it to "school-english-word"
                 let stringToInsert = "school-english-word-"+numberOneResult;
                 let resultOne = stringToInsert.replace(/\s/g, "");
                 let idAddEnglish = document.getElementById("firstSelection");
@@ -302,7 +316,7 @@ function EnglishFrenchTest () {
                 let rawFrenchPlus = "`" + rawFrench + "`";
 
                 let numberTwo = numberFinder(rawFrenchPlus);
-
+                //numberTwoResult is the number of the container that the user slected and adding it to "school-english-word"
                 let numberTwoResult = numberTwo / 2;
                 numberTwo.toString;
                 let stringToInsertFrench = "school-french-word-"+numberTwoResult;
@@ -311,12 +325,10 @@ function EnglishFrenchTest () {
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
 
-
-
-
-
         } else {
 
+                /**if user input was incorrect the correct class in not applied and the html is 
+                 * reutned to origional to wait the next input */
                 document.getElementById("firstSelection").classList.remove("selected");
                 document.getElementById("secondSelection").classList.remove("selected-french");
 
@@ -359,6 +371,9 @@ function EnglishFrenchTest () {
 
 }
 
+/**similar to the above code the following functions are used if the user selects the french word first
+ * it will apply the same test. 
+ */
 
 document.getElementById("school-english-word-1").addEventListener("click", FrenchEnglishTest);
 document.getElementById("school-english-word-2").addEventListener("click", FrenchEnglishTest);
@@ -490,15 +505,6 @@ function addingNumbersToString (a, b) {
 }
 
 
-test = document.getElementsByName("school-english-Word-1");
-let result = test.outerHTML;
-console.log(result);
-
-
-function resetId (a) {
-        let test = a;
-        test.id = test; 
-}
 
 
 
