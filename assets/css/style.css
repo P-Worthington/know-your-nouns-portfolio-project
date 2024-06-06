@@ -10,6 +10,10 @@ body {
     background-color: rgb(20, 20, 20);
 }
 
+i {
+    margin-right: 5px;
+}
+
 /*container styling*/
 .container {
     background-image: url(../images/french-skyline-darken.jpg);
@@ -22,6 +26,7 @@ body {
     margin-top: 10px;
     padding-bottom: 20px;
     padding-top: 5px;
+    min-width: 375px;
 }
 
 #logo-container {
@@ -48,7 +53,7 @@ body {
     margin-top: 0;
     letter-spacing: 2px;
     min-width: 375px;
-    max-width: 500px;
+    max-width: 375px;
 }
 
 .title-area h1 {
@@ -118,17 +123,17 @@ body {
 
 /*catagories page styling*/
 
-.catagories, .game {
+.game {
     font-size: larger;
     margin-left: auto;
     margin-right: auto;
-    min-width: 400px;
+    min-width: 375px;
     max-width: 400px;
     padding-left: 25px;
     justify-content: center;
 }
 
-.catagory-box, .game-box {
+.game-box {
     background-color: rgb(59, 59, 59);
     font-size: large;
     text-align: center;
@@ -145,11 +150,6 @@ body {
     height: 30px;
 }
 
-.catagory-box a {
-    text-decoration: none;
-    color: #f0faff;
-    font-size: larger;
-}
 
 .game-box {
     padding-top: 15px;
@@ -171,12 +171,10 @@ body {
 }
 
 .score-area {
-    background-color: rgb(59, 59, 59);
-    border-radius: 5px;
     z-index: 99;
     letter-spacing: 2px;
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 300px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -186,6 +184,18 @@ body {
 
 }
 
-#score-school {
-    margin-top: -10px;
+.score, .lives {
+    background-color: rgb(20, 20, 20);
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 75px;
+    margin-left: 5px;
+    margin-right: 5px;
+    letter-spacing: 2px;
 }
+
+
+.score > span, .lives > span {
+    margin-left: 5%;
+}
+
