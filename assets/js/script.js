@@ -291,6 +291,9 @@ function EnglishFrenchTest () {
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
 
+                incrimentScore(document.getElementById("score-school"));
+                
+
         } else {
 
                 /**if user input was incorrect the correct class in not applied and the html is 
@@ -446,14 +449,16 @@ function FrenchEnglishTest () {
 
 }
 
-
-
-
-
-
-
-
-
+function incrimentScore (a) {
+        console.log(a);
+        let b = a.innerHTML;
+        console.log(b);
+        let bNum = +b;
+        let c = bNum + 1;
+        c.toString
+        console.log(c);
+        document.getElementById("score-school").textContent = c;
+}
 
 
 
