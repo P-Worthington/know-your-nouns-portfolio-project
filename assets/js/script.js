@@ -445,9 +445,7 @@ function FrenchEnglishTest () {
 
                 decrimentLives(document.getElementById("lives-school"));
 
-                identifyLives()
-                
-
+                identifyLives();
         }
 
 }
@@ -460,8 +458,9 @@ function identifyLives () {
         console.log(c);
         if (c < 0) {
                 console.log("GameOver! Hit refresh to try again.");
-                reset(schoolWords, schoolContainersEnglish, schoolContainersFrench)
-                
+                gameReset();
+                document.getElementById("lives-school").textContent = 3;
+                document.getElementById("score-school").textContent = 0;
 
         }
 }
@@ -528,16 +527,12 @@ function shuffle(array) {
 
 function gameReset () {
 
+        let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
         shuffle(schoolWords);
         let containersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
         let containersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
         shuffle(containersEnglish);
         shuffle(containersFrench);
-
-        console.log(schoolWords);
-        console.log(containersEnglish);
-        console.log(containersFrench);
-
 
         //to remove reandomly slected array item 
         let firstArray = schoolWords.shift();
@@ -611,6 +606,6 @@ function gameReset () {
         document.getElementById(frenchContainerSix).textContent = frenchWordSix;
         // end of repeat 
 
-
+        //to remove correct classlist// 
 
 }
