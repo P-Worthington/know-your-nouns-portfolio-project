@@ -102,6 +102,8 @@ function gameSchool (a, b, c) {
         document.getElementById(frenchContainerSix).textContent = frenchWordSix;
         // end of repeat 
 
+
+
 }
 
 
@@ -335,6 +337,8 @@ function EnglishFrenchTest () {
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
 
+                decrimentLives(document.getElementById("lives-school"));
+
         }
 
 }
@@ -400,9 +404,7 @@ function FrenchEnglishTest () {
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
 
-
-
-
+                incrimentScore(document.getElementById("score-school"));
 
         } else {
 
@@ -444,18 +446,27 @@ function FrenchEnglishTest () {
                 let idAddFrench = document.getElementById("secondSelection");
                 idAddFrench.id = (resultTwo);
 
+                decrimentLives(document.getElementById("lives-school"));
+
         }
 
 }
 
-function incrimentScore (a) {
-        console.log(a);
+
+
+function decrimentLives (a) {
         let b = a.innerHTML;
-        console.log(b);
+        let bNum = +b;
+        let c = bNum - 1;
+        c.toString
+        document.getElementById("lives-school").textContent = c;
+}
+
+function incrimentScore (a) {
+        let b = a.innerHTML;
         let bNum = +b;
         let c = bNum + 1;
         c.toString
-        console.log(c);
         document.getElementById("score-school").textContent = c;
 }
 
