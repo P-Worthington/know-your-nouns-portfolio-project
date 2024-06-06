@@ -20,7 +20,7 @@ let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Boo
 let schoolContainersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
 let schoolContainersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
 
-//gameSchool(schoolWords, schoolContainersEnglish, schoolContainersFrench);
+
 
 function gameSchool (a, b, c) {
         let schoolWords = a;
@@ -481,7 +481,6 @@ function identifyLives () {
         if (c < 0) {
                 console.log("GameOver! Hit refresh to try again.");
                 gameReset();
-
         }
 }
 
