@@ -464,8 +464,8 @@ function identifyLives () {
         b = a.innerHTML;
         c = +b;
         console.log(c);
-        if (c === -1) {
-                alert("GameOver");
+        if (c < 0) {
+                alert("GameOver! Hit refresh to try again.");
         }
 }
 
