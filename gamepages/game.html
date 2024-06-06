@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     
 </head>
-<body>
+<body onload="gameSchool()">
     <div id="logo-container">
         <a href="../index.html"><img src="../assets/images/logo.png" alt="cirular logo with the outline of france within" id="logo-image"></a>
     </div>
@@ -36,24 +36,29 @@
 
         <!--title area div-->
         <div class="title-area">
-            <h1>House</h1>
+            <h1>Know Your Nouns</h1>
         </div>
 
-        <div class="game">
-            <div class="game-box" id="house-english-word-1"><p>English 1</p></div>
-            <div class="game-box" id="house-french-word-1"><p>French 1</p></div>
-            <div class="game-box" id="house-english-word-2"><p>English 2</p></div>
-            <div class="game-box" id="house-french-word-2"><p>French 2</p></div>
-            <div class="game-box" id="house-english-word-3"><p>English 3</p></div>
-            <div class="game-box" id="house-french-word-3"><p>French 3</p></div>
-            <div class="game-box" id="house-english-word-4"><p>English 4</p></div>
-            <div class="game-box" id="house-french-word-4"><p>French 4</p></div>
-            <div class="game-box" id="house-english-word-5"><p>English 5</p></div>
-            <div class="game-box" id="house-french-word-5"><p>French 5</p></div>
-            <div class="game-box" id="house-english-word-6"><p>English 6</p></div>
-            <div class="game-box" id="house-french-word-6"><p>French 6</p></div>
+        <div class="game" id="school-game">
+            <div class="game-box" id="school-english-word-1" onclick="activateAndAssess1()"><p></p></div>
+            <div class="game-box" id="school-french-word-1" onclick="activateAndAssess2()"><p></p></div>
+            <div class="game-box" id="school-english-word-2" onclick="activateAndAssess3()"><p></p></div>
+            <div class="game-box" id="school-french-word-2" onclick="activateAndAssess4()"><p></p></div>
+            <div class="game-box" id="school-english-word-3" onclick="activateAndAssess5()"><p></p></div>
+            <div class="game-box" id="school-french-word-3" onclick="activateAndAssess6()"><p></p></div>
+            <div class="game-box" id="school-english-word-4" onclick="activateAndAssess7()"><p></p></div>
+            <div class="game-box" id="school-french-word-4" onclick="activateAndAssess8()"><p></p></div>
+            <div class="game-box" id="school-english-word-5" onclick="activateAndAssess9()"><p></p></div>
+            <div class="game-box" id="school-french-word-5" onclick="activateAndAssess10()"><p></p></div>
+            <div class="game-box" id="school-english-word-6" onclick="activateAndAssess11()"><p></p></div>
+            <div class="game-box" id="school-french-word-6" onclick="activateAndAssess12()"><p></p></div>
         </div>
 
+        <div class="score-area">
+            <p>Score:
+            <span id="score-school">0</span>
+            </p>
+        </div>
 
     </div>
 
