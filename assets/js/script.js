@@ -288,6 +288,8 @@ function EnglishFrenchTest () {
                 idAddFrench.id = (resultTwo);
 
                 incrimentScore(document.getElementById("score-school"));
+
+                modulusOperation ()
                 
 
         } else {
@@ -403,6 +405,8 @@ function FrenchEnglishTest () {
 
                 incrimentScore(document.getElementById("score-school"));
 
+                modulusOperation ()
+
         } else {
 
                 document.getElementById("firstSelection").classList.remove("selected");
@@ -455,12 +459,23 @@ function identifyLives () {
         a = document.getElementById("lives-school");
         b = a.innerHTML;
         c = +b;
-        console.log(c);
         if (c < 0) {
-                console.log("GameOver! Hit refresh to try again.");
+                alert("Game Over! Try Again!")
                 gameReset();
                 document.getElementById("lives-school").textContent = 3;
                 document.getElementById("score-school").textContent = 0;
+                removeClass(document.getElementById("school-english-word-1"));
+                removeClass(document.getElementById("school-english-word-2"));
+                removeClass(document.getElementById("school-english-word-3"));
+                removeClass(document.getElementById("school-english-word-4"));
+                removeClass(document.getElementById("school-english-word-5"));
+                removeClass(document.getElementById("school-english-word-6"));
+                removeClass(document.getElementById("school-french-word-1"));
+                removeClass(document.getElementById("school-french-word-2"));
+                removeClass(document.getElementById("school-french-word-3"));
+                removeClass(document.getElementById("school-french-word-4"));
+                removeClass(document.getElementById("school-french-word-5"));
+                removeClass(document.getElementById("school-french-word-6"));
 
         }
 }
@@ -605,7 +620,28 @@ function gameReset () {
         document.getElementById(englishContainerSix).textContent = englishWordSix;
         document.getElementById(frenchContainerSix).textContent = frenchWordSix;
         // end of repeat 
+}
 
-        //to remove correct classlist// 
+function removeClass (a) {
+         a.classList.remove("correct");      
+}
 
+function modulusOperation () {
+        a = document.getElementById("score-school").innerHTML;
+        b = a % 6
+        if (b === 0) {
+                gameReset();
+                removeClass(document.getElementById("school-english-word-1"));
+                removeClass(document.getElementById("school-english-word-2"));
+                removeClass(document.getElementById("school-english-word-3"));
+                removeClass(document.getElementById("school-english-word-4"));
+                removeClass(document.getElementById("school-english-word-5"));
+                removeClass(document.getElementById("school-english-word-6"));
+                removeClass(document.getElementById("school-french-word-1"));
+                removeClass(document.getElementById("school-french-word-2"));
+                removeClass(document.getElementById("school-french-word-3"));
+                removeClass(document.getElementById("school-french-word-4"));
+                removeClass(document.getElementById("school-french-word-5"));
+                removeClass(document.getElementById("school-french-word-6"));
+        }
 }
