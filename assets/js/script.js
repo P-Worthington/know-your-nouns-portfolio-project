@@ -20,7 +20,7 @@ let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Boo
 let schoolContainersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
 let schoolContainersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
 
-gameSchool(schoolWords, schoolContainersEnglish, schoolContainersFrench)
+//gameSchool(schoolWords, schoolContainersEnglish, schoolContainersFrench);
 
 function gameSchool (a, b, c) {
         let schoolWords = a;
@@ -457,7 +457,21 @@ function FrenchEnglishTest () {
 
 }
 
-
+function gameReset () {
+        document.getElementById(englishContainerOne).textContent = ("");
+        document.getElementById(frenchContainerOne).textContent = ("");
+        document.getElementById(englishContainerTwo).textContent = ("");
+        document.getElementById(frenchContainerTwo).textContent = ("");
+        document.getElementById(englishContainerThree).textContent = ("");
+        document.getElementById(frenchContainerThree).textContent = ("");
+        document.getElementById(englishContainerFour).textContent = ("");
+        document.getElementById(frenchContainerFour).textContent = ("");
+        document.getElementById(englishContainerFive).textContent = ("");
+        document.getElementById(frenchContainerFive).textContent = ("");
+        document.getElementById(englishContainerSix).textContent = ("");
+        document.getElementById(frenchContainerSix).textContent = ("");
+        //gameSchool(schoolWords, schoolContainersEnglish, schoolContainersFrench);
+}
 
 function identifyLives () {
         a = document.getElementById("lives-school");
@@ -465,7 +479,9 @@ function identifyLives () {
         c = +b;
         console.log(c);
         if (c < 0) {
-                alert("GameOver! Hit refresh to try again.");
+                console.log("GameOver! Hit refresh to try again.");
+                gameReset();
+
         }
 }
 
