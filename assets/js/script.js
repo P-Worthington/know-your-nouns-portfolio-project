@@ -21,7 +21,6 @@ let schoolContainersEnglish = ["school-english-word-1", "school-english-word-2",
 let schoolContainersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
 
 
-
 function gameSchool (a, b, c) {
         let schoolWords = a;
         shuffle(schoolWords);
@@ -101,11 +100,7 @@ function gameSchool (a, b, c) {
         document.getElementById(englishContainerSix).textContent = englishWordSix;
         document.getElementById(frenchContainerSix).textContent = frenchWordSix;
         // end of repeat 
-
-
-
 }
-
 
 //the id of school-english-word-1 is randomised using shuffle. lets find the result and assess that// 
 
@@ -457,21 +452,6 @@ function FrenchEnglishTest () {
 
 }
 
-function gameReset () {
-        document.getElementById(englishContainerOne).textContent = ("");
-        document.getElementById(frenchContainerOne).textContent = ("");
-        document.getElementById(englishContainerTwo).textContent = ("");
-        document.getElementById(frenchContainerTwo).textContent = ("");
-        document.getElementById(englishContainerThree).textContent = ("");
-        document.getElementById(frenchContainerThree).textContent = ("");
-        document.getElementById(englishContainerFour).textContent = ("");
-        document.getElementById(frenchContainerFour).textContent = ("");
-        document.getElementById(englishContainerFive).textContent = ("");
-        document.getElementById(frenchContainerFive).textContent = ("");
-        document.getElementById(englishContainerSix).textContent = ("");
-        document.getElementById(frenchContainerSix).textContent = ("");
-        //gameSchool(schoolWords, schoolContainersEnglish, schoolContainersFrench);
-}
 
 function identifyLives () {
         a = document.getElementById("lives-school");
@@ -480,7 +460,9 @@ function identifyLives () {
         console.log(c);
         if (c < 0) {
                 console.log("GameOver! Hit refresh to try again.");
-                gameReset();
+                reset(schoolWords, schoolContainersEnglish, schoolContainersFrench)
+                
+
         }
 }
 
@@ -544,4 +526,91 @@ function shuffle(array) {
 }
 
 
+function gameReset () {
 
+        shuffle(schoolWords);
+        let containersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
+        let containersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
+        shuffle(containersEnglish);
+        shuffle(containersFrench);
+
+        console.log(schoolWords);
+        console.log(containersEnglish);
+        console.log(containersFrench);
+
+
+        //to remove reandomly slected array item 
+        let firstArray = schoolWords.shift();
+        let secondArray = schoolWords.shift();
+        let thirdArray = schoolWords.shift();
+        let forthArray = schoolWords.shift();
+        let fifthArray = schoolWords.shift();
+        let sixthArray = schoolWords.shift();
+
+        var values = firstArray.split(" ");
+        var englishWordOne = values[0];
+        var frenchWordOne = firstArray.substring(firstArray.indexOf(' ') + 1);
+        
+        //to select random container 
+        let englishContainerOne = containersEnglish.shift();
+        let frenchContainerOne = containersFrench.shift();
+
+        //to send random word to random container
+        document.getElementById(englishContainerOne).textContent = englishWordOne;
+        document.getElementById(frenchContainerOne).textContent = frenchWordOne;
+        
+        //repeat of the above code 
+        var values = secondArray.split(" ");
+        var englishWordTwo = values[0];
+        var frenchWordTwo = secondArray.substring(secondArray.indexOf(' ') + 1);
+        
+        let englishContainerTwo = containersEnglish.shift();
+        let frenchContainerTwo = containersFrench.shift();
+
+        document.getElementById(englishContainerTwo).textContent = englishWordTwo;
+        document.getElementById(frenchContainerTwo).textContent = frenchWordTwo;
+        
+        var values = thirdArray.split(" ");
+        var englishWordThree = values[0];
+        var frenchWordThree = thirdArray.substring(thirdArray.indexOf(' ') + 1);
+        
+        let englishContainerThree = containersEnglish.shift();
+        let frenchContainerThree = containersFrench.shift();
+
+        document.getElementById(englishContainerThree).textContent = englishWordThree;
+        document.getElementById(frenchContainerThree).textContent = frenchWordThree;
+        
+        var values = forthArray.split(" ");
+        var englishWordFour = values[0];
+        var frenchWordFour = forthArray.substring(forthArray.indexOf(' ') + 1);
+        
+        let englishContainerFour = containersEnglish.shift();
+        let frenchContainerFour = containersFrench.shift();
+
+        document.getElementById(englishContainerFour).textContent = englishWordFour;
+        document.getElementById(frenchContainerFour).textContent = frenchWordFour;
+        
+        var values = fifthArray.split(" ");
+        var englishWordFive = values[0];
+        var frenchWordFive = fifthArray.substring(fifthArray.indexOf(' ') + 1);
+        
+        let englishContainerFive = containersEnglish.shift();
+        let frenchContainerFive = containersFrench.shift();
+
+        document.getElementById(englishContainerFive).textContent = englishWordFive;
+        document.getElementById(frenchContainerFive).textContent = frenchWordFive;
+        
+        var values = sixthArray.split(" ");
+        var englishWordSix = values[0];
+        var frenchWordSix = sixthArray.substring(sixthArray.indexOf(' ') + 1);
+        
+        let englishContainerSix = containersEnglish.shift();
+        let frenchContainerSix = containersFrench.shift();
+
+        document.getElementById(englishContainerSix).textContent = englishWordSix;
+        document.getElementById(frenchContainerSix).textContent = frenchWordSix;
+        // end of repeat 
+
+
+
+}
