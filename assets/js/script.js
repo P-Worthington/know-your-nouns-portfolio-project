@@ -387,6 +387,7 @@ function EnglishFrenchTest () {
                 decrimentLives(document.getElementById("lives-school"));
 
                 identifyLives()
+
         }
 }
 
@@ -497,6 +498,7 @@ function FrenchEnglishTest () {
                 decrimentLives(document.getElementById("lives-school"));
 
                 identifyLives();
+
         }
 }
 
