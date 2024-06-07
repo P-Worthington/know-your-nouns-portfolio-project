@@ -34,12 +34,12 @@ p {
     min-height: 600px;
 }
 
-#logo-container {
+.logo-container {
     text-align: center;
     margin-bottom: -15px;
 }
 
-#logo-image {
+.logo-image {
     height: 70px;
     width: 70px;
     margin: auto;
