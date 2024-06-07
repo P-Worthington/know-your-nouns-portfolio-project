@@ -183,6 +183,21 @@ p {
     background-color: green;
 }
 
+@keyframes colorchange {
+    0% {
+        background-color: red;
+    }
+    100% {
+        background-color: rgb(59, 59, 59);
+    }
+}
+
+.incorrect {
+    animation: colorchange 1s;
+    animation-iteration-count: 1.5s;
+    animation-play-state: running;
+}
+
 .score-area {
     z-index: 99;
     letter-spacing: 2px;
