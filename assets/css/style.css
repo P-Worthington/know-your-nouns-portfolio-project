@@ -167,7 +167,6 @@ p {
 .game-box {
     padding-top: 15px;
     margin-top: 15px;
-    padding-bottom: -20px;
 }
 
 .selected {
@@ -194,7 +193,7 @@ p {
 
 .incorrect {
     animation: colorchange 1s;
-    animation-iteration-count: 1.5s;
+    animation-iteration-count: 1;
     animation-play-state: running;
 }
 
@@ -253,7 +252,6 @@ p {
     .game-box {
         padding-top: 15px;
         margin-top: 15px;
-        padding-bottom: -20px;
         margin-left: 5px;
     }
 }
