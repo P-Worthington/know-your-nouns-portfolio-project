@@ -1,6 +1,37 @@
 //words used for the game
-let schoolWordsBase = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
-let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
+let schoolWordsBase = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", 
+"Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", 
+"computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", 
+"Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", 
+"Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", 
+"Coffee Café", "Tea Thé", "Time Temps", "Man Homme", "Way façon", "People Gens", "Life Vie", "Day Jour", "Work Travail", "Call Appel", "Night Nuit", "Home Maison", 
+"Thought Pensée", "Name Nom", "Farther Père", "Guy Mec", "Place Place", "Feel Sentiment", "Girl Fille", "Left Gauche", "Right Droit", "Mother Mère", "Course Cours", 
+"Dad Papa", "World Monde", "Son Fils", "Car Voiture", "Woman Femme", "Friend Ami", "Mind Esprit",  "Head Tête", "Mom Maman", "Boy Garçon", "Job Emploi", "Baby Bébé", 
+"Family Famille", "Room Chambre", "Brother Frère", "Idea Idée", "Wife Épouse", "Start Début", "Bit Morceau", "Matter Affaire", "Run Course", "School École", "Problem Problème", 
+"End Fin", "Phone Téléphone", "Hope Espoir", "Face Visage", "Turn Tour", "Heart Cœur", "Worry Inquiétude", "Business Affaires", "Watch Montre", "Year An", "Hand Main", "Doctor Médecin", 
+"Sit Assise", "Second Seconde", "Child Enfant", "Pay Paiement", "Water Eau", "Person Personne", "Drink Boisson", "Change Changement", "Hit Coup", "Check Chèque", "Music Musique", 
+"Inside Intérieur", "Sleep Sommeil", "Mine Mien", "Deal Accord", "Body Corps", "Close Fermeture", "Party Fête", "Daughter Fille", "Word Mot", "Fun Amusement", "Husband Mari", 
+"Fire Feu", "Fight Combat", "Rest Repos", "Week Semaine", "Game Jeu", "Side Côté", "Truth Vérité", "Walk Promenade", "Reason Raison", "City Ville", "Half Moitié", "Welcome Bienvenue", 
+"Hurry Hâte", "Bed Lit", "Front Devant", "Answer Réponse", "Team Équipe", "Light Lumière", "Country Pays", "Pick Choix", "Fact Fait", "Black Noir", "Boss Chef", "Diner Dîner", 
+"Hour Heure", "Uncle Oncle", "Past Passé"]
+
+
+let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", 
+"Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", 
+"computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", 
+"Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", 
+"Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", 
+"Coffee Café", "Tea Thé", "Time Temps", "Man Homme", "Way façon", "People Gens", "Life Vie", "Day Jour", "Work Travail", "Call Appel", "Night Nuit", "Home Maison", 
+"Thought Pensée", "Name Nom", "Farther Père", "Guy Mec", "Place Place", "Feel Sentiment", "Girl Fille", "Left Gauche", "Right Droit", "Mother Mère", "Course Cours", 
+"Dad Papa", "World Monde", "Son Fils", "Car Voiture", "Woman Femme", "Friend Ami", "Mind Esprit",  "Head Tête", "Mom Maman", "Boy Garçon", "Job Emploi", "Baby Bébé", 
+"Family Famille", "Room Chambre", "Brother Frère", "Idea Idée", "Wife Épouse", "Start Début", "Bit Morceau", "Matter Affaire", "Run Course", "School École", "Problem Problème", 
+"End Fin", "Phone Téléphone", "Hope Espoir", "Face Visage", "Turn Tour", "Heart Cœur", "Worry Inquiétude", "Business Affaires", "Watch Montre", "Year An", "Hand Main", "Doctor Médecin", 
+"Sit Assise", "Second Seconde", "Child Enfant", "Pay Paiement", "Water Eau", "Person Personne", "Drink Boisson", "Change Changement", "Hit Coup", "Check Chèque", "Music Musique", 
+"Inside Intérieur", "Sleep Sommeil", "Mine Mien", "Deal Accord", "Body Corps", "Close Fermeture", "Party Fête", "Daughter Fille", "Word Mot", "Fun Amusement", "Husband Mari", 
+"Fire Feu", "Fight Combat", "Rest Repos", "Week Semaine", "Game Jeu", "Side Côté", "Truth Vérité", "Walk Promenade", "Reason Raison", "City Ville", "Half Moitié", "Welcome Bienvenue", 
+"Hurry Hâte", "Bed Lit", "Front Devant", "Answer Réponse", "Team Équipe", "Light Lumière", "Country Pays", "Pick Choix", "Fact Fait", "Black Noir", "Boss Chef", "Diner Dîner", 
+"Hour Heure", "Uncle Oncle", "Past Passé"]
+
 //containers used to put the words into 
 let schoolContainersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
 let schoolContainersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
@@ -591,7 +622,22 @@ function shuffle(array) {
  */
 function gameReset () {
 
-        let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
+        let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", 
+        "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", 
+        "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", 
+        "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", 
+        "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", 
+        "Coffee Café", "Tea Thé", "Time Temps", "Man Homme", "Way façon", "People Gens", "Life Vie", "Day Jour", "Work Travail", "Call Appel", "Night Nuit", "Home Maison", 
+        "Thought Pensée", "Name Nom", "Farther Père", "Guy Mec", "Place Place", "Feel Sentiment", "Girl Fille", "Left Gauche", "Right Droit", "Mother Mère", "Course Cours", 
+        "Dad Papa", "World Monde", "Son Fils", "Car Voiture", "Woman Femme", "Friend Ami", "Mind Esprit",  "Head Tête", "Mom Maman", "Boy Garçon", "Job Emploi", "Baby Bébé", 
+        "Family Famille", "Room Chambre", "Brother Frère", "Idea Idée", "Wife Épouse", "Start Début", "Bit Morceau", "Matter Affaire", "Run Course", "School École", "Problem Problème", 
+        "End Fin", "Phone Téléphone", "Hope Espoir", "Face Visage", "Turn Tour", "Heart Cœur", "Worry Inquiétude", "Business Affaires", "Watch Montre", "Year An", "Hand Main", "Doctor Médecin", 
+        "Sit Assise", "Second Seconde", "Child Enfant", "Pay Paiement", "Water Eau", "Person Personne", "Drink Boisson", "Change Changement", "Hit Coup", "Check Chèque", "Music Musique", 
+        "Inside Intérieur", "Sleep Sommeil", "Mine Mien", "Deal Accord", "Body Corps", "Close Fermeture", "Party Fête", "Daughter Fille", "Word Mot", "Fun Amusement", "Husband Mari", 
+        "Fire Feu", "Fight Combat", "Rest Repos", "Week Semaine", "Game Jeu", "Side Côté", "Truth Vérité", "Walk Promenade", "Reason Raison", "City Ville", "Half Moitié", "Welcome Bienvenue", 
+        "Hurry Hâte", "Bed Lit", "Front Devant", "Answer Réponse", "Team Équipe", "Light Lumière", "Country Pays", "Pick Choix", "Fact Fait", "Black Noir", "Boss Chef", "Diner Dîner", 
+        "Hour Heure", "Uncle Oncle", "Past Passé"]
+
         shuffle(schoolWords);
         let containersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
         let containersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
