@@ -1,35 +1,22 @@
-
-
-/** code to split array items // 
-* https://stackoverflow.com/questions/40784961/get-all-string-in-one-variable-after-space-in-javascript
-*/
-
-
-//global variables of words //
-let workWords = ["computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse"]
-let outdoorWords = ["Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poilet", "River Rivière", "Lake Lac"]
-let shoppingWords = ["Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte" ]
-let houseWords = ["Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door, Porte"]
-let restaruantWords = ["Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
-
-
-
-
+//words used for the game
 let schoolWordsBase = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
 let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
+//containers used to put the words into 
 let schoolContainersEnglish = ["school-english-word-1", "school-english-word-2", "school-english-word-3", "school-english-word-4", "school-english-word-5", "school-english-word-6"];
 let schoolContainersFrench = ["school-french-word-1", "school-french-word-2", "school-french-word-3", "school-french-word-4", "school-french-word-5", "school-french-word-6"];
 
-
+/**gameSchool is the function that runs on game.html it randomises the words and the 
+ * containers and put the words into the containers */
 function gameSchool (a, b, c) {
         let schoolWords = a;
+        //the shuffle function is detailed below. It uses the Fisher-Yates shuffle.
         shuffle(schoolWords);
         let containersEnglish = b;
         let containersFrench = c;
         shuffle(containersEnglish);
         shuffle(containersFrench);
 
-        //to remove reandomly slected array item 
+        //to remove reandomly slected array item from shuffled array
         let firstArray = schoolWords.shift();
         let secondArray = schoolWords.shift();
         let thirdArray = schoolWords.shift();
@@ -37,6 +24,7 @@ function gameSchool (a, b, c) {
         let fifthArray = schoolWords.shift();
         let sixthArray = schoolWords.shift();
 
+        //splits the two words in the string one being french and one english
         var values = firstArray.split(" ");
         var englishWordOne = values[0];
         var frenchWordOne = firstArray.substring(firstArray.indexOf(' ') + 1);
@@ -49,7 +37,7 @@ function gameSchool (a, b, c) {
         document.getElementById(englishContainerOne).textContent = englishWordOne;
         document.getElementById(frenchContainerOne).textContent = frenchWordOne;
         
-        //repeat of the above code 
+        //repeat of the above code for each container
         var values = secondArray.split(" ");
         var englishWordTwo = values[0];
         var frenchWordTwo = secondArray.substring(secondArray.indexOf(' ') + 1);
@@ -102,9 +90,10 @@ function gameSchool (a, b, c) {
         // end of repeat 
 }
 
-
-
-//the id of school-english-word-1 is randomised using shuffle. lets find the result and assess that// 
+/** The following 12 functions add the selected class to the container
+ * the class is used to denote to the user there selection 
+ * it also adds the ID's of firstSelection and secondSelection respectively
+ * The below ID's are used later to identify if correct or incorrect */
 
 //adding highlighted accent to selected word
 function activateAndAssess1 () {
@@ -275,7 +264,7 @@ function activateAndAssess12 () {
 }
 
 
-
+//runs a function called EnglishFrenchTest on click and assess if correct
 document.getElementById("school-french-word-1").addEventListener("click", EnglishFrenchTest);
 document.getElementById("school-french-word-2").addEventListener("click", EnglishFrenchTest);
 document.getElementById("school-french-word-3").addEventListener("click", EnglishFrenchTest);
@@ -284,7 +273,8 @@ document.getElementById("school-french-word-5").addEventListener("click", Englis
 document.getElementById("school-french-word-6").addEventListener("click", EnglishFrenchTest);
 
 /** function to assess if two selected items are correct or incorrect
- */
+ * uses the previously mentioned firstSelection and secondSelection ID's 
+ * that were generated by the user input*/
 function EnglishFrenchTest () {
         //first selected word
         let first = document.getElementById("firstSelection");
@@ -292,7 +282,7 @@ function EnglishFrenchTest () {
         //second selected word
         let second = document.getElementById("secondSelection");
         let secondParameter = second.innerHTML;
-        //to concate the two words together as they were in teh origional string
+        //to concate the two words together as they were in the origional string
         let stringTest = firstParameter+(" ")+secondParameter;
         
         let result = schoolWordsBase.includes(stringTest);
@@ -304,9 +294,13 @@ function EnglishFrenchTest () {
                 document.getElementById("firstSelection").classList.remove("selected");
                 document.getElementById("secondSelection").classList.remove("selected-french");
 
+                //the correct class denoted to the user that the pair are correct
                 document.getElementById("firstSelection").classList.add("correct");
                 document.getElementById("secondSelection").classList.add("correct");
                 
+                /**The following piece of code identifys which item was selected
+                 * (as it was randomly assigned) and uses this to return the origional ID
+                 * allowing the next selection to run*/
                 let first = document.getElementById("firstSelection");
                 let raw = first.outerHTML;
                 raw.toString;
@@ -350,9 +344,13 @@ function EnglishFrenchTest () {
                 document.getElementById("firstSelection").classList.remove("selected");
                 document.getElementById("secondSelection").classList.remove("selected-french");
 
+                //incorrect class is an animation the only remains red for 1.5s
                 document.getElementById("firstSelection").classList.add("incorrect");
                 document.getElementById("secondSelection").classList.add("incorrect");
 
+                /**The following piece of code identifys which item was selected
+                 * (as it was randomly assigned) and uses this to return the origional ID
+                 * allowing the next selection to run*/
                 let first = document.getElementById("firstSelection");
                 let raw = first.outerHTML;
                 raw.toString;
@@ -367,7 +365,6 @@ function EnglishFrenchTest () {
                 let resultOne = stringToInsert.replace(/\s/g, "");
                 let idAddEnglish = document.getElementById("firstSelection");
                 idAddEnglish.id = (resultOne);
-
 
                 let second = document.getElementById("secondSelection");
                 let rawFrench = second.outerHTML;
@@ -391,10 +388,8 @@ function EnglishFrenchTest () {
         }
 }
 
-/**similar to the above code the following functions are used if the user selects the french word first
- * it will apply the same test. 
- */
 
+//runs a function called FrenchEnglishTest on click and assess if correct
 document.getElementById("school-english-word-1").addEventListener("click", FrenchEnglishTest);
 document.getElementById("school-english-word-2").addEventListener("click", FrenchEnglishTest);
 document.getElementById("school-english-word-3").addEventListener("click", FrenchEnglishTest);
@@ -402,6 +397,10 @@ document.getElementById("school-english-word-4").addEventListener("click", Frenc
 document.getElementById("school-english-word-5").addEventListener("click", FrenchEnglishTest);
 document.getElementById("school-english-word-6").addEventListener("click", FrenchEnglishTest);
 
+/**similar to the above code the following functions are used if the user selects the french word first
+ * it will apply the same test. This was done to enhance user experience. In early testing it was clear 
+ * that often teh user will selected the french word first. 
+ */
 function FrenchEnglishTest () {
         let first = document.getElementById("firstSelection");
         let firstParameter = first.innerHTML;
@@ -502,6 +501,9 @@ function FrenchEnglishTest () {
         }
 }
 
+/**identifyLives is a function used to assess the number of lives remaining  
+ * identifyLives also provides the user with the Game Over alert and resets the score
+*/
 function identifyLives () {
         a = document.getElementById("lives-school");
         b = a.innerHTML;
@@ -527,6 +529,9 @@ function identifyLives () {
         }
 }
 
+/**decrimentLives is a function called if the user inputs and incorrect answer
+ * it takes the value of the lives and reduces it by 1
+ */
 function decrimentLives (a) {
         let b = a.innerHTML;
         let bNum = +b;
@@ -535,6 +540,9 @@ function decrimentLives (a) {
         document.getElementById("lives-school").textContent = c;
 }
 
+/**incrimentScore is a function called if the user inputs a correct answer
+ * it increases the value of the score by 1 
+ */
 function incrimentScore (a) {
         let b = a.innerHTML;
         let bNum = +b;
@@ -543,10 +551,11 @@ function incrimentScore (a) {
         document.getElementById("score-school").textContent = c;
 }
 
-
-
-//https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/
-
+/** numberFinder is a function used to identify numbers contained within a string 
+ * numberFinder was used from:
+ * 
+ * https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/
+ */
 function numberFinder(a) {
         let numbers = "";
         for (let i = 0; i < a.length; i++) {
@@ -556,20 +565,10 @@ function numberFinder(a) {
         }
         return numbers;
     }
-    
-function addingNumbersToString (a, b) {
-        let subject = a;
-        let raw = subject.outerHTML;
-        raw.toString;
-        let rawString = "`" + rawFrench + "`";
-        let number = numberFinder(rawString);
-        number.toString;
-        let stringToInsert = b+number;
-        let result = stringToInsert.replace(/\s/g, "");
-        return result;
-}
 
-/** The Fisher-Yates shuffle
+/** shuffle is a function used to shuffle the words in both the array of words and the containers
+ * It is known as the The Fisher-Yates shuffle and was found and reserched on the following two sites:
+ * 
  * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
  * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
  */
@@ -587,6 +586,9 @@ function shuffle(array) {
 }
 
 
+/**GameReset is a function used to reset the game once the number of lives reaches 0
+ * or 6 correct answers have been provided. 
+ */
 function gameReset () {
 
         let schoolWords = ["Pen Stylo", "Pencil Crayon", "Calculator Calculatrice", "Book Livre", "Dictionary Dictionnaire", "Student Étudiante", "Teacher Professeur", "Math Mathématiques", "English Anglais", "History Histoire", "Science Science", "Homework Devoirs", "Pencilcase Trouse", "Eraser Gomme", "Protractor Rapporteur", "computer Ordinateur", "Keyboard Clavier", "Meeting Réunion", "Office Bureau", "Colleague Collègue", "Stapler Agrafeuse", "Tree Arbre", "Cow Vache", "Duck Canard", "Sheep Mouton", "Chicken Poulet", "River Rivière", "Lake Lac", "Shop Magasin", "Clothes Vêtements", "Food Nourriture", "Cost Coût", "Money Argent", "Card Carte", "Kitchen Cuisine", "Carpet Tapis", "Fridge Frigo", "Freezer Congélateur", "Cupboard Placard", "Door Porte", "Bill Addition", "Starter Entrée", "Dish Plat", "Desert Dessert", "Coffee Café", "Tea Thé"]
@@ -669,10 +671,15 @@ function gameReset () {
         // end of repeat 
 }
 
+/**function to remove the correct class */
 function removeClass (a) {
          a.classList.remove("correct");      
 }
 
+/**modulusOperation is a function called when the game board has all 
+ * 6 correct answers. It words by calling game reset if the score is divisible by 6
+ * and produces no remiander 
+ */
 function modulusOperation () {
         a = document.getElementById("score-school").innerHTML;
         b = a % 6
