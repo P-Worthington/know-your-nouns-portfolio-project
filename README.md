@@ -2,7 +2,7 @@
 <img src="assets/readme-images/KYN-responsive.jpg" width=100% height=700px>
 
 
-Know Your Nouns (KYN) is a website designed to help the user increase their French vocabulary. Using JavaScript HTML and CSS KYN will take six random pairs of words from a bank, split them into their English and French version, place the words into random containers and allow the user to try and identify the pairs with clear output the the user which are correct, incorrect and selected.
+Know Your Nouns (KYN) is a website designed to help the user increase their French vocabulary. Using JavaScript HTML and CSS, KYN will take six random pairs of words from a bank, split them into their English and French version, place the words into random containers and allow the user to try and identify the pairs with clear output the the user which are correct, incorrect and selected.
 
 
 The main aim of KNY was to create a front end website that demonstrates proficiency in JS HTML and CSS with a particular focus on JS. However, it was also a goal to create a website that would genuinely benefit the creator, and others looking to improve their French vocabulary. Upon  the completion of my diploma I endeavour to return to this site and increase the work bank further.
@@ -45,6 +45,14 @@ An input from the user that is incorrect will not increase the score and will in
 
 
 <img src="assets/readme-images/KYN-incorrect.jpg" width=500px height=800px>
+
+
+## Target Audience
+KYN is targeted towards individuals looking to increase their French vocabulary. There is no teaching of the words within the word bank, there is only the ability to test the user. Therefore, it is assumed that the user has somewhat of a skill in French already.
+
+
+## UI
+KYN was designed specifically to remove all unnecessary steps to learning. The site consists of only two pages with the play button and instructions all located on the landing page. Once the user presses play they are immediately met by the active game which will continue to cycle through the word bank once all correct items are selected. If the user loses they are provided feedback of this through an alert and they once again met with a set of new words. This is by design to keep the user entertained and more likely to continue playing.
 
 
 ## Testing
